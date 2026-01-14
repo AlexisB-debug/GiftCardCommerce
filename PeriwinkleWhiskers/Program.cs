@@ -48,6 +48,7 @@ class Program
 
     private static string DatabaseDropdownMenu()
     {
-        throw new NotImplementedException();
+        // This is a temparay method so that I can test my program before I code a dropdown list.
+        string targetDatabase = "SleepingBearDatabaseConn";
     }
 }

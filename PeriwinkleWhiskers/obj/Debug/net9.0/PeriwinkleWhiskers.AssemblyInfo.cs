@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PeriwinkleWhiskers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f4469f3913baac10c6240254df41c8e4c99ac89")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ef4208269b78aff2cff8bb8c40a5b9c398ca3c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PeriwinkleWhiskers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PeriwinkleWhiskers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
