@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gIU0xBENsMw=",
+  "dgSpecHash": "HoArbRgVTwM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexi\\Repos\\GiftCardCommerce\\PeriwinkleWhiskers\\PeriwinkleWhiskers.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexi\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
+    "C:\\Users\\Alexi\\.nuget\\packages\\newtonsoft.json\\13.0.5-beta1\\newtonsoft.json.13.0.5-beta1.nupkg.sha512"
+  ],
   "logs": []
 }
