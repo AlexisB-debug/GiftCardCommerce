@@ -43,10 +43,25 @@ public class GiftCardRepository : IGiftCardRepository
                 giftCardTimestamp = giftCard.GiftCardTimestamp
             });
     }
-    
-    public void SumConsignedGiftCards()
+
+    public decimal SumConsignedGiftCards(string giftCardMerchant)
     {
-        throw new NotImplementedException();
+        var sqlCreateTable = $@"CREATE TABLE periwinklewhiskers.{giftCardMerchant}ConsignedCards AS SELECT * FROM periwinklewhiskers.consign WHERE GiftCardMerchant = @giftCardMerchant";
+        var parametersCreateTable = new { giftCardMerchantValue = giftCardMerchant };
+        _connExecute(conn => conn.Execute(sqlCreateTable, parametersCreateTable));
+        
+        var SqlSumTable = $@"SELECT SUM(giftCardBalance) AS total_{giftCardMerchant}_balance FROM periwinklewhiskers.{giftCardMerchant}ConsignedCards";
+        var parametersSumTable = new { giftCardMerchantValue = giftCardMerchant };
+        var result = _connExecute(conn => conn.Execute(SqlSumTable, parametersSumTable));
+        
+        return result?.total_balance ?? 0m;
+        
+        // How to prevent the same cards from being recounted in the future?
+        // After the balance is returned, the cards need to be deleted from the table periwinklewhiskers.consign to prevent a future recounted.
+        var sqlDeleteJoinDrop = $@"DELETE periwinklewhiskers.consign FROM periwinkleWhiskers.consign AS A JOIN periwinklewhiskers.{giftCardMerchant}ConsignedCards " +
+            "AS periwinklewhiskers.{giftCardMerchant}ConsignedCards ON perisinkleWhisker.consign.GiftCardCode = periwinklewhiskers.{giftCardMerchant}ConsignedCards";
+        var parametersDeleteJoinDrop = new { giftCardMerchantValue = giftCardMerchant };
+        _conExecute(conn => conn.Execute(sqlDeleteJoinDrop, parametersDeleteJoinDrop));
     }
 
     // The user can delete the gift card from his/her flea market stand before cashing in.
