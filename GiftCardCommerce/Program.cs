@@ -1,4 +1,6 @@
 ﻿using GiftCardCommerce.PeriwinkleWhiskers.Models;
+using GiftCardCommerce.PeriwinkleWhiskers.Services;
+using Microsoft.Extensions.Configuration;
 
 namespace GiftCardCommerce;
 
@@ -6,6 +8,14 @@ class Program
 {
     static void Main(string[] args)
     {
+        IConfiguration configuration = new ConfigurationBuilder()
+            .SetBasePath(AppContext.BaseDirectory)
+            .AddJsonFile("appsettings.json", optional: false)
+            .Build();
+        string connectionString = configuration.GetConnectionString("PeriwinkleWhiskersConn")
+            ?? throw new InvalidOperationException("No PeriwinkleWhiskers connection string found");
+        DatabaseAccessFactory databaseAccessFactory = new DatabaseAccessFactory(connectionString);
+        IGiftCardRepository repository = new GiftCardRepository(databaseAccessFactory);
         Console.WriteLine("=== Periwinkle Whiskers Gift Card Exchange ===");
 
         try
@@ -35,8 +45,7 @@ class Program
             }
 
             // validate the gift card (check if the gift card exists in the collaborator merchant's system)
-            IGiftCardRepository giftCardRepository = new GiftCardRepository();
-            GiftCard? giftCard = giftCardRepository.GetGiftCard(giftCardCode);
+            GiftCardCommerce.PeriwinkleWhiskers.Models.GiftCard? giftCard = repository.GetGiftCard(giftCardCode);
 
             if (giftCard == null)
             {
@@ -70,7 +79,7 @@ class Program
             }
 
             // save the gift card to the "consign table"
-            giftCardRepository.SaveGiftCard(giftCard);
+            repository.SaveGiftCard(giftCard);
             Console.WriteLine($"\nSuccess! ${payoutAmount:F2} has been deposited into your account.");
             Console.WriteLine($"Gift card '{giftCard.GiftCardCode}' is now in our consignment inventory.");
         }

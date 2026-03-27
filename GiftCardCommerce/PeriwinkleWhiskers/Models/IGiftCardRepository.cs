@@ -1,3 +1,5 @@
+using GiftCardCommerce.PeriwinkleWhiskers.Models;
+
 namespace GiftCardCommerce.PeriwinkleWhiskers.Models;
 
 public interface IGiftCardRepository
