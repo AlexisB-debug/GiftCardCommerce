@@ -1,0 +1,14 @@
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\bin\Debug\net9.0\GiftCardCommerce.exe
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\bin\Debug\net9.0\GiftCardCommerce.deps.json
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\bin\Debug\net9.0\GiftCardCommerce.runtimeconfig.json
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\bin\Debug\net9.0\GiftCardCommerce.dll
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\bin\Debug\net9.0\GiftCardCommerce.pdb
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\GiftCardCommerce.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\GiftCardCommerce.AssemblyInfoInputs.cache
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\GiftCardCommerce.AssemblyInfo.cs
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\GiftCardCommerce.csproj.CoreCompileInputs.cache
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\GiftCardCommerce.dll
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\refint\GiftCardCommerce.dll
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\GiftCardCommerce.pdb
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\GiftCardCommerce.genruntimeconfig.cache
+C:\Users\Alexi\Repos\GiftCardCommerce\GiftCardCommerce\obj\Debug\net9.0\ref\GiftCardCommerce.dll
