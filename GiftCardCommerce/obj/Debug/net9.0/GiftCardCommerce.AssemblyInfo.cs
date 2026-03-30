@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GiftCardCommerce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb4bf7449e6d499126938a34381993f3833daede")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63d9b928673213c0f43e5cfb0e5e12da1ff19452")]
 [assembly: System.Reflection.AssemblyProductAttribute("GiftCardCommerce")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GiftCardCommerce")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
